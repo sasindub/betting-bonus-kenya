@@ -259,9 +259,41 @@ h6,
 }
 
 .bg-offer {
-    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(../img/offer.jpg) center center no-repeat;
+    background: linear-gradient(rgba(43, 40, 37, 0.397), rgba(43, 40, 37, .9)), url(../img/hero1.png) center center no-repeat;
     background-size: cover;
 }
+
+
+/* Base styling for the text */
+#betnowtext {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem; /* Adjust font size as needed */
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite; /* Looping animation */
+}
+
+/* Keyframe Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Hover effect for interactivity */
+#betnowtext:hover {
+    color: #E88F2A;
+    transform: scale(1.2);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    animation: none; /* Disable the pulse animation on hover */
+    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+}
+
 
 .team-item img {
     transition: .5s;
