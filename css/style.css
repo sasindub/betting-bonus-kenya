@@ -247,13 +247,13 @@ h6,
     height: calc(100% - 45px);
     top: 135px;
     left: 0;
-    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(../img/service.jpg) center center no-repeat;
+    background: linear-gradient(rgba(169, 169, 169, 0.9), rgba(205, 205, 205, 0.9)), url(../img/service.jpg) center center no-repeat;
     background-size: cover;
     z-index: -1;
 }
 
 .contact::after {
-    background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
+    background: linear-gradient(rgba(43, 40, 37, .5), rgba(52, 52, 52, 0.856)), url(../img/about.png) center center no-repeat;
     background-size: cover;
 }
 
