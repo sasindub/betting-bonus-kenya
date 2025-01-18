@@ -26,14 +26,51 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.reviews.css">
     <style>
         .primaryColor{
             color: #E88F2A;
         }
+        .testimonial-item{
+            max-width: 450px;
+        }
     </style>
+    <style>
+        .profile-container {
+          position: relative;
+        }
+      
+        .profile-image {
+          width: 80px;
+          height: 80px;
+          background-color: #ffffff;
+          border: 5px solid #de9b00;
+          margin: 5px;
+          border-radius: 50%;
+          overflow: hidden; /* Ensures the image stays within the circle */
+          position: relative;
+        }
+      
+        .profile-logo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 60px;
+        }
+      
+        .profile-badge {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 1rem;
+          padding: 5px;
+          background-color: #de9b00;
+          border-radius: 50%;
+          color: #fff;
+        }
+      </style>
+      
 </head>
 <body>
       <!-- Topbar Start -->
@@ -100,108 +137,213 @@
     </div>
     <!-- Page Header End -->
 
+    <!-- //reviews -->
     <div class="container text-center py-5">
+      <ul class="nav nav-tabs justify-content-center" id="reviewTabs" role="tablist">
 
-        <ul class="nav nav-tabs justify-content-center" id="reviewTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="all-reviews-tab" data-bs-toggle="tab" data-bs-target="#all-reviews" type="button" role="tab" aria-controls="all-reviews" aria-selected="true">Bantu bet <span>4.9</span></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="google-reviews-tab" data-bs-toggle="tab" data-bs-target="#google-reviews" type="button" role="tab" aria-controls="google-reviews" aria-selected="false">1xBet <span>4.7</span></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="facebook-reviews-tab" data-bs-toggle="tab" data-bs-target="#facebook-reviews" type="button" role="tab" aria-controls="facebook-reviews" aria-selected="false">Megapari <span>4.9</span></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tripadvisor-reviews-tab" data-bs-toggle="tab" data-bs-target="#tripadvisor-reviews" type="button" role="tab" aria-controls="tripadvisor-reviews" aria-selected="false">888Starz <span>5.0</span></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="amazon-reviews-tab" data-bs-toggle="tab" data-bs-target="#amazon-reviews" type="button" role="tab" aria-controls="amazon-reviews" aria-selected="false">Gamemania <span>4.9</span></button>
-            </li>
-        </ul>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-reviews-tab" data-bs-toggle="tab" data-bs-target="#review-content" type="button" role="tab" aria-controls="all-reviews" aria-selected="true" data-url="./reviews/bantubetReviews.html">              <!-- Profile Image with Border and Label -->
+              <div class="profile-container">
+                    <div class="profile-image">
+                    <img src="./img/bantu.png" alt="Logo" class="profile-logo" />
+                    </div>
+                    <!-- Label -->
+                    <span class="profile-badge">01</span>
+              </div>
+              Bantu bet 
+            <div class="star-rating" style="font-size: 0.8rem; color: #de9b00">
+            <i class="bi bi-star-fill"></i><span class="ms-2">4.9</span>
+          </div></button>
+        </li>
 
-        <div class="tab-content" id="reviewTabsContent">
-            <div class="tab-pane fade show active" id="all-reviews" role="tabpanel" aria-labelledby="all-reviews-tab">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <div class="text">Amei voltarei mais vezes</div>
-                        <div class="author">
-                            <img src="https://via.placeholder.com/40" alt="Alisson Lima">
-                            Alisson Lima
-                        </div>
-                        <div class="time">2 days ago on Google</div>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="1xbetReviews-tab" data-bs-toggle="tab" data-bs-target="#review-content" type="button" role="tab" aria-controls="1xbetReviews" aria-selected="false" data-url="./reviews/1xbetReviews.html"> <div class="profile-container">
+                    <div class="profile-image">
+                    <img src="./img/1x.png" alt="Logo" class="profile-logo" />
                     </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <div class="text">Muito bom amei! Legal pra caramba</div>
-                        <div class="author">
-                            <img src="https://via.placeholder.com/40" alt="Larisse Oliveira">
-                            Larisse Oliveira
-                        </div>
-                        <div class="time">2 days ago on Google</div>
-                    </div>
-                </div>
+                    <!-- Label -->
+                    <span class="profile-badge">02</span>
+              </div>
+              1Xbet
+            <div class="star-rating" style="font-size: 0.8rem; color: #de9b00">
+            <i class="bi bi-star-fill"></i><span class="ms-2">4.9</span>
+          </div>
+        </button>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="facebook-reviews-tab" data-bs-toggle="tab" data-bs-target="#review-content" type="button" role="tab" aria-controls="facebook-reviews" aria-selected="false" data-url="./reviews/megaopariReviews.html"> <div class="profile-container">
+            <div class="profile-image">
+            <img src="./img/megapari.png" alt="Logo" class="profile-logo" />
             </div>
+            <!-- Label -->
+            <span class="profile-badge">03</span>
+      </div>
+      MegaPari
+    <div class="star-rating" style="font-size: 0.8rem; color: #de9b00">
+    <i class="bi bi-star-fill"></i><span class="ms-2">4.9</span>
+  </div</button>
+        </li>
 
-            <div class="tab-pane fade" id="google-reviews" role="tabpanel" aria-labelledby="google-reviews-tab">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <div class="text">Amei voltarei mais vezes</div>
-                        <div class="author">
-                            <img src="https://via.placeholder.com/40" alt="Alisson Lima">
-                            Alisson Lima
-                        </div>
-                        <div class="time">2 days ago on Google</div>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tripadvisor-reviews-tab" data-bs-toggle="tab" data-bs-target="#review-content" type="button" role="tab" aria-controls="tripadvisor-reviews" aria-selected="false" data-url="./reviews/888starzReviews.html"> <div class="profile-container">
+                    <div class="profile-image">
+                    <img src="./img/888.jpg" alt="Logo" class="profile-logo" />
                     </div>
-                </div>
-            </div>
+                    <!-- Label -->
+                    <span class="profile-badge">04</span>
+              </div>
+              888Starz
+            <div class="star-rating" style="font-size: 0.8rem; color: #de9b00">
+            <i class="bi bi-star-fill"></i><span class="ms-2">4.9</span>
+          </div</button>
+        </li>
 
-            <div class="tab-pane fade" id="facebook-reviews" role="tabpanel" aria-labelledby="facebook-reviews-tab">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <div class="text">Davey, How you doin</div>
-                        <div class="author">
-                            <img src="https://via.placeholder.com/40" alt="João Lopes">
-                            João Lopes
-                        </div>
-                        <div class="time">2 days ago on Facebook</div>
-                    </div>
-                </div>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="amazon-reviews-tab" data-bs-toggle="tab" data-bs-target="#review-content" type="button" role="tab" aria-controls="amazon-reviews" aria-selected="false" data-url="./reviews/gamemaniaReviews.html"> <div class="profile-container">
+            <div class="profile-image">
+            <img src="./img/gamemania.png" alt="Logo" class="profile-logo" style="height: 50px;"/>
             </div>
+            <!-- Label -->
+            <span class="profile-badge">05</span>
+      </div>
+      Gemmania
+    <div class="star-rating" style="font-size: 0.8rem; color: #de9b00">
+    <i class="bi bi-star-fill"></i><span class="ms-2">4.9</span>
+  </div</button>
+        </li>
 
-            <div class="tab-pane fade" id="tripadvisor-reviews" role="tabpanel" aria-labelledby="tripadvisor-reviews-tab">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <div class="text">The place is always great, I visit it a couple of times a month...</div>
-                        <div class="author">
-                            <img src="https://via.placeholder.com/40" alt="gers restrepo">
-                            gers restrepo
-                        </div>
-                        <div class="time">2 days ago on Tripadvisor</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="amazon-reviews" role="tabpanel" aria-labelledby="amazon-reviews-tab">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <div class="text">Amazing product and great customer service!</div>
-                        <div class="author">
-                            <img src="https://via.placeholder.com/40" alt="John Doe">
-                            John Doe
-                        </div>
-                        <div class="time">3 days ago on Amazon</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="load-more">Load More</div>
+    </ul>
+    
+      <div class="tab-content" id="reviewTabsContent">
+        <!-- Dynamic content will load here -->
+        <div class="tab-pane fade show active row d-flex flex-wrap justify-content-center" id="review-content" role="tabpanel" aria-labelledby="all-reviews-tab"></div>
+      </div>
     </div>
+    <!-- //reviews -->
+
+
+      <!-- Footer Start -->
+  <div class="container-fluid bg-img text-secondary" style="margin-top: 90px">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="col-lg-4 col-md-6 mb-lg-n5">
+          <div
+            class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary border-inner p-4">
+            <a href="index.html" class="navbar-brand">
+              <h1 class="m-0 text-uppercase text-white" style="font-size: 21pt">
+                betting bonus kenya
+              </h1>
+            </a>
+            <p class="mt-3">
+              Always remember to do thorough research before choosing a
+              platform, set a budget for your bets, and never wager more than
+              you can afford to lose. Stay informed about the latest trends,
+              and take advantage of any bonuses or promotions that may enhance
+              your chances. Make smart, informed decisions and enjoy the
+              thrill responsibly!
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-6">
+          <div class="row gx-5">
+            <div class="col-lg-6 col-md-12 pt-5 mb-5">
+              <h4 class="text-primary text-uppercase mb-4">Get In Touch</h4>
+              <div class="d-flex mb-2">
+                <i class="bi bi-geo-alt text-primary me-2"></i>
+                <p class="mb-0">123 Street, New York, USA</p>
+              </div>
+              <div class="d-flex mb-2">
+                <i class="bi bi-envelope-open text-primary me-2"></i>
+                <p class="mb-0">info@example.com</p>
+              </div>
+              <div class="d-flex mb-2">
+                <i class="bi bi-telephone text-primary me-2"></i>
+                <p class="mb-0">+012 345 67890</p>
+              </div>
+              <div class="d-flex mt-4">
+                <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="#"><i
+                    class="fab fa-twitter fw-normal"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="#"><i
+                    class="fab fa-facebook-f fw-normal"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="#"><i
+                    class="fab fa-linkedin-in fw-normal"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5">
+              <h4 class="text-primary text-uppercase mb-4">Quick Links</h4>
+              <div class="d-flex flex-column justify-content-start">
+                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About
+                  Us</a>
+                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                  Reviews</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-secondary py-4" style="background: #111111">
+    <div class="container text-center">
+      <p class="mb-0">
+        &copy;
+        <a class="text-white border-bottom" href="#">Betting Bonus Kenya</a>.
+        All Rights Reserved. Designed by
+        <a class="text-white border-bottom" href="https://tioss.com">TIOSS</a>
+      </p>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+
+
 </body>
 </html>
+
+<!-- Add this script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll("[data-url]");
+  
+      function loadTabContent(url, target) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector(target).innerHTML = html;
+          })
+          .catch((error) => {
+            console.error("Error loading tab content:", error);
+          });
+      }
+  
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+          const url = this.getAttribute("data-url");
+          const target = this.getAttribute("data-bs-target");
+          loadTabContent(url, target);
+        });
+  
+        // Automatically load content for the first active tab
+        if (tab.classList.contains("active")) {
+          const url = tab.getAttribute("data-url");
+          const target = tab.getAttribute("data-bs-target");
+          loadTabContent(url, target);
+        }
+      });
+    });
+</script>
